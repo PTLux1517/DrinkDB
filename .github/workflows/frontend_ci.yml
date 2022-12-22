@@ -1,0 +1,22 @@
+name: Frontend_CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'frontend/src/**'
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: ./frontend/1_install_dependencies.sh
+      - name: Build
+        run: ./frontend/2_build.sh
+      - name: Test
+        run: ./frontend/3_test.sh
