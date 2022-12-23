@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'frontend/src/**'
+      - '.github/workflows/frontend_ci.yml'
 
 jobs:
   build_and_test:
@@ -15,8 +16,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Install dependencies
-        run: ./frontend/1_install_dependencies.sh
+        working-directory: ./frontend
+        run: ./1_install_dependencies.sh
       - name: Build
-        run: ./frontend/2_build.sh
+        working-directory: ./frontend
+        run: ./2_build.sh
       - name: Test
-        run: ./frontend/3_test.sh
+        working-directory: ./frontend
+        run: ./3_test.sh
