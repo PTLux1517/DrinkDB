@@ -1,8 +1,11 @@
 {
   "name": "drankdb",
   "dependencies": {
+    "@fontsource/dancing-script": "^4.5.10",
+    "@fontsource/pacifico": "^4.5.9",
     "html-webpack-plugin": "^5.5.0",
     "react": "^18.2.0",
+    "react-card-flip": "^1.2.0",
     "react-dom": "^18.2.0",
     "ts-loader": "^9.3.1",
     "typescript": "^4.9.4",

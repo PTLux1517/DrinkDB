@@ -1,1 +1,28 @@
+@import "@fontsource/dancing-script/latin.css";
+@import "@fontsource/pacifico/latin.css";
 
+body {
+  background-color: hsl(60, 20%, 8%);
+}
+
+.cocktail-card {
+  width: 200px;
+  height: 400px;
+  text-align: center;
+  .cocktail-card-front {
+    width: inherit;
+    height: inherit;
+    background-color: cadetblue;
+    font-family: 'dancing script', sans-serif;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .cocktail-card-back {
+    width: inherit;
+    height: inherit;
+    background-color: darkgoldenrod;
+    font-family: 'pacifico', sans-serif;
+  }
+}
