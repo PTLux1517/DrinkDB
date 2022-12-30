@@ -1,7 +1,15 @@
 import * as React from "react";
 
-export default function CocktailCardFront() {
-    return <div className={"cocktail-card-back"}>
-        Back
+interface Props {
+    onClick: React.MouseEventHandler<HTMLDivElement>
+}
+
+export default function CocktailCardFront(
+    {
+        onClick
+    }: Props
+) {
+    return <div className={"cocktail-card-back"} onClick={onClick}>
+        Base
     </div>
 }

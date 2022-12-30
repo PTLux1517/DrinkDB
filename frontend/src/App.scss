@@ -6,17 +6,37 @@ body {
 }
 
 .cocktail-card {
-  width: 200px;
-  height: 400px;
+  $cardWidth: 200px;
+  $cardHeight: $cardWidth;
+  $nameHeight: calc(0.15 * $cardWidth);
+  $cardRadius: 20px;
+  width: $cardWidth;
+  height: $cardHeight;
+  cursor: pointer;
   text-align: center;
+  border-radius: $cardRadius;
   .cocktail-card-front {
     width: inherit;
     height: inherit;
-    background-color: cadetblue;
-    font-family: 'dancing script', sans-serif;
+    //background-color: cadetblue;
+    .cocktail-name {
+      position: relative;
+      z-index: 1;
+      height: $nameHeight;
+      line-height: $nameHeight;
+      font-family: 'dancing script', sans-serif;
+      font-size: calc(0.7 * $nameHeight);
+      color: hsl(60, 5%, 70%);
+      background-color: hsla(60, 80%, 3%, 0.7);
+      border-radius: $cardRadius $cardRadius 0 0;
+    }
     img {
-      width: 200px;
-      height: 200px;
+      position: relative;
+      z-index: 0;
+      top: -$nameHeight;
+      width: $cardWidth;
+      height: $cardWidth;
+      border-radius: $cardRadius;
     }
   }
   .cocktail-card-back {
@@ -24,5 +44,11 @@ body {
     height: inherit;
     background-color: darkgoldenrod;
     font-family: 'pacifico', sans-serif;
+    border-radius: $cardRadius;
+  }
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    filter: brightness(115%);
+    //box-shadow: 0 0 15px 3px hsl(60, 10%, 9%);
   }
 }
