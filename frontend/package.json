@@ -2,6 +2,7 @@
   "name": "drankdb",
   "dependencies": {
     "@fontsource/dancing-script": "^4.5.10",
+    "@fontsource/monoton": "^4.5.10",
     "@fontsource/pacifico": "^4.5.9",
     "html-webpack-plugin": "^5.5.0",
     "react": "^18.2.0",
