@@ -1,30 +1,23 @@
 import * as React from "react";
 
 interface Props {
-    onClick: React.MouseEventHandler<HTMLDivElement>
+    onClick: React.MouseEventHandler<HTMLDivElement>,
+    idx: number
 }
 
 export default function CocktailCardBack(
     {
-        onClick
+        onClick,
+        idx
     }: Props
 ) {
-    return <div className={"cocktail-card-back"} onClick={onClick}>
+    return <div id={"ccb"+idx} className={"cocktail-card-back"} onClick={onClick}>
         <div className={"info-bar-grid-container"}>
-            <div className={"r1 cursive"}>Rating</div>
-            <div className={"r2"}>9</div>
-            <div className={"r3"}><hr/></div>
-            <div className={"r4 cursive"}>Cost</div>
-            <div className={"r5"}>$4.04</div>
-            <div className={"r6"}><hr/></div>
-            <div className={"r7 cursive"}>Calories</div>
-            <div className={"r8"}>220</div>
-            <div className={"r9"}><hr/></div>
-            <div className={"r10 cursive"}>Link</div>
-            <div className={"r11"}>---</div>
-            <div className={"r12"}><hr/></div>
-            <div className={"r13 cursive"}>Notes</div>
-            <div className={"r14"}>-</div>
+            <div className={"r1 cursive"}>Rating</div><div className={"r2"}>9</div><div className={"r3"}><hr/></div>
+            <div className={"r4 cursive"}>Cost</div><div className={"r5"}>$4.04</div><div className={"r6"}><hr/></div>
+            <div className={"r7 cursive"}>Calories</div><div className={"r8"}>220</div><div className={"r9"}><hr/></div>
+            <div className={"r10 cursive"}>Link</div><div className={"r11"}>---</div><div className={"r12"}><hr/></div>
+            <div className={"r13 cursive"}>Notes</div><div className={"r14"}>-</div>
         </div>
         <div className={"recipe-grid-container"}>
             {/*Base*/}
@@ -37,7 +30,7 @@ export default function CocktailCardBack(
             <div className={"r6 cspan cursive blue"}>Mixers</div>
             <div className={"r7 c1"}>1/2</div><div className={"r7 c2"}>oz</div><div className={"r7 c3 right brown"}>Fernet</div><div className={"r7 c4 left"}>branca</div>
             <div className={"r8 c1"}>1/2</div><div className={"r8 c2"}>oz</div><div className={"r8 c3 right brown"}>Generic</div><div className={"r8 c4 left"}>simple syrup</div>
-            <div className={"r9 c1"}>2</div><div className={"r9 c2"}>dsh</div><div className={"r9 c3 right brown"}>Angostura</div><div className={"r9 c4 left"}>bitters</div>
+            <div className={"r9 c1"}>2</div><div className={"r9 c2"}>dash</div><div className={"r9 c3 right brown"}>Angostura</div><div className={"r9 c4 left"}>bitters</div>
             <div className={"r10 c1"}>&nbsp;</div>
             <div className={"r11 c1"}>&nbsp;</div>
             <div className={"r12 c1"}>&nbsp;</div>
